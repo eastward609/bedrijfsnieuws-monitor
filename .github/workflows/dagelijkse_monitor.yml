@@ -1,0 +1,109 @@
+name: Dagelijkse bedrijfsmonitor
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'bedrijven.csv'
+  schedule:
+    - cron: '23 7 * * *'
+      timezone: 'Europe/Brussels'
+  workflow_dispatch:
+    inputs:
+      actie:
+        description: 'Wat wil je doen?'
+        required: true
+        type: choice
+        default: verversen
+        options:
+          - verversen
+          - toevoegen
+          - verwijderen
+      bedrijf:
+        description: 'Naam van het bedrijf (nodig bij toevoegen/verwijderen)'
+        required: false
+        type: string
+      ticker:
+        description: 'Beurscode, optioneel (bijvoorbeeld AAPL)'
+        required: false
+        type: string
+      website:
+        description: 'Officiële bedrijfswebsite met https://'
+        required: false
+        type: string
+      bronnaam:
+        description: 'Korte bronnaam (bijvoorbeeld Investor relations)'
+        required: false
+        type: string
+      bronurl:
+        description: 'Officieel RSS- of nieuwspagina-adres met https://'
+        required: false
+        type: string
+      brontype:
+        description: 'Type bron: probeer auto bij gewone nieuwswebsites'
+        required: true
+        default: auto
+        type: choice
+        options:
+          - auto
+          - rss
+          - html
+      extra_domein:
+        description: 'Extra officieel domein indien nodig (zonder https://)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: monitor-deploy
+  cancel-in-progress: false
+
+jobs:
+  verzamel-en-publiceer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Haal de bedrijvenlijst en het nieuwsarchief op
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Gebruik Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verzamel alleen officiële bedrijfsberichten en bouw dashboard
+        env:
+          BEHEER_ACTIE: ${{ inputs.actie || 'verversen' }}
+          BEHEER_BEDRIJF: ${{ inputs.bedrijf || '' }}
+          BEHEER_TICKER: ${{ inputs.ticker || '' }}
+          BEHEER_WEBSITE: ${{ inputs.website || '' }}
+          BEHEER_BRONNAAM: ${{ inputs.bronnaam || '' }}
+          BEHEER_BRONURL: ${{ inputs.bronurl || '' }}
+          BEHEER_BRONTYPE: ${{ inputs.brontype || 'auto' }}
+          BEHEER_EXTRADOMEIN: ${{ inputs.extra_domein || '' }}
+        run: python monitor.py
+      - name: Bewaar bedrijven en nieuwsarchief in GitHub
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add bedrijven.csv data/nieuws.json data/bronnenstatus.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Bijgewerkte officiele bedrijfsnieuwsmonitor'
+            git push
+          fi
+      - name: Configureer GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Maak publicatiepakket
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Publiceer het online dashboard
+        id: deployment
+        uses: actions/deploy-pages@v4
