@@ -1,1 +1,32 @@
-{"sources": {}}
+{
+  "aantal_bronnen": 2,
+  "laatste_controle": "2026-11-17T16:13:00+00:00",
+  "nieuwe_berichten": 0,
+  "sources": {
+    "apple|https://www.apple.com/newsroom/rss-feed.rss": {
+      "bedrijf": "Apple",
+      "bron_naam": "Apple Newsroom",
+      "bron_type": "rss",
+      "bron_url": "https://www.apple.com/newsroom/rss-feed.rss",
+      "gecontroleerd_op": "2026-11-17T16:13:00+00:00",
+      "gevonden": 20,
+      "laatste_succes": "2026-11-17T16:13:00+00:00",
+      "melding": "20 berichten gelezen via RSS/Atom",
+      "status": "ok",
+      "ticker": "AAPL"
+    },
+    "volkswagen|https://www.volkswagen-newsroom.com/en/feeds/press-releases": {
+      "bedrijf": "Volkswagen",
+      "bron_naam": "Volkswagen Persberichten",
+      "bron_type": "rss",
+      "bron_url": "https://www.volkswagen-newsroom.com/en/feeds/press-releases",
+      "gecontroleerd_op": "2026-11-17T16:13:00+00:00",
+      "gevonden": 100,
+      "laatste_succes": "2026-11-17T16:13:00+00:00",
+      "melding": "100 berichten gelezen via RSS/Atom",
+      "status": "ok",
+      "ticker": "VOW3"
+    }
+  },
+  "startarchief": 120
+}
