@@ -2,6 +2,42 @@
   "items": [
     {
       "bedrijf": "Apple",
+      "beginarchief": false,
+      "bron": "Apple Newsroom",
+      "categorie": "Overig",
+      "ontdekt_op": "2026-11-17T17:37:56+00:00",
+      "publicatiedatum": "2026-11-17T16:59:36+00:00",
+      "samenvatting": "Formula 1® returns to the U.S. this weekend for the FORMULA 1® HEINEKEN LAS VEGAS GRAND PRIX™ 2026, streaming live on Apple TV.",
+      "ticker": "AAPL",
+      "titel": "Formula 1® Las Vegas Grand Prix™ streams live on Apple TV this weekend",
+      "url": "https://www.apple.com/newsroom/2026/11/formula-1-las-vegas-grand-prix-streams-live-on-apple-tv-this-weekend/"
+    },
+    {
+      "bedrijf": "KBC",
+      "beginarchief": true,
+      "bron": "Bedrijfsnieuws",
+      "categorie": "Overig",
+      "ontdekt_op": "2026-11-17T17:37:56+00:00",
+      "publicatiedatum": null,
+      "samenvatting": "",
+      "ticker": "KBC",
+      "titel": "Investor Relations",
+      "url": "https://www.kbc.com/nl/investor-relations.html?zone=topnav"
+    },
+    {
+      "bedrijf": "KBC",
+      "beginarchief": true,
+      "bron": "Bedrijfsnieuws",
+      "categorie": "Overig",
+      "ontdekt_op": "2026-11-17T17:37:56+00:00",
+      "publicatiedatum": null,
+      "samenvatting": "",
+      "ticker": "KBC",
+      "titel": "Investor Relations",
+      "url": "https://www.kbc.com/nl/investor-relations.html?zone=topnav&zone=topnav"
+    },
+    {
+      "bedrijf": "Apple",
       "beginarchief": true,
       "bron": "Apple Newsroom",
       "categorie": "Overig",
