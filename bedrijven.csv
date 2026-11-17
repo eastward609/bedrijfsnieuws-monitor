@@ -1,0 +1,3 @@
+bedrijf;ticker;officiele_website;bron_naam;bron_url;bron_type;actief;extra_officiele_domeinen
+Apple;AAPL;https://www.apple.com;Apple Newsroom;https://www.apple.com/newsroom/rss-feed.rss;rss;ja;
+Volkswagen;VOW3;https://www.volkswagen-newsroom.com;Volkswagen Persberichten;https://www.volkswagen-newsroom.com/en/feeds/press-releases;rss;ja;
