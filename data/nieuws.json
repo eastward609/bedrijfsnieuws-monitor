@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "bedrijf": "Volkswagen",
+      "beginarchief": false,
+      "bron": "Volkswagen Persberichten",
+      "categorie": "Operationeel",
+      "ontdekt_op": "2026-11-19T07:45:00+00:00",
+      "publicatiedatum": "2026-11-18T00:00:00+00:00",
+      "samenvatting": "One year after the launch of the current T-Roc , the flagship model of the product line celebrates its world premiere today: the new T-Roc R . Its extremely dynamic character is immediately recognisable by its distinctive design. The corresponding performance is provided by a newly developed 245 kW (333 PS) mild-hybrid turbocharged petrol engine, which is combined as standard with a seven-speed di",
+      "ticker": "VOW3",
+      "titel": "Born on the racetrack: Volkswagen presents the T-Roc R with 333 P",
+      "url": "https://www.volkswagen-newsroom.com/en/press-releases/born-on-the-racetrack-volkswagen-presents-the-t-roc__r-with-333-p-20870"
+    },
+    {
       "bedrijf": "Apple",
       "beginarchief": false,
       "bron": "Apple Newsroom",
