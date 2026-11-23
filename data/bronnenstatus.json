@@ -1,6 +1,6 @@
 {
   "aantal_bronnen": 2,
-  "laatste_controle": "2026-11-22T07:38:42+00:00",
+  "laatste_controle": "2026-11-23T07:59:35+00:00",
   "nieuwe_berichten": 0,
   "sources": {
     "kbc|https://www.kbc.com/nl/newsroom/persberichtenarchief/2026/alle-onderwerpen.html": {
@@ -8,9 +8,9 @@
       "bron_naam": "Bedrijfsnieuws",
       "bron_type": "auto",
       "bron_url": "https://www.kbc.com/nl/newsroom/persberichtenarchief/2026/alle-onderwerpen.html",
-      "gecontroleerd_op": "2026-11-22T07:38:42+00:00",
+      "gecontroleerd_op": "2026-11-23T07:59:35+00:00",
       "gevonden": 2,
-      "laatste_succes": "2026-11-22T07:38:42+00:00",
+      "laatste_succes": "2026-11-23T07:59:35+00:00",
       "melding": "2 berichten gelezen via Officiële webpagina",
       "status": "ok",
       "ticker": "KBC"
@@ -20,9 +20,9 @@
       "bron_naam": "Volkswagen Persberichten",
       "bron_type": "rss",
       "bron_url": "https://www.volkswagen-newsroom.com/en/feeds/press-releases",
-      "gecontroleerd_op": "2026-11-22T07:38:42+00:00",
+      "gecontroleerd_op": "2026-11-23T07:59:35+00:00",
       "gevonden": 100,
-      "laatste_succes": "2026-11-22T07:38:42+00:00",
+      "laatste_succes": "2026-11-23T07:59:35+00:00",
       "melding": "100 berichten gelezen via RSS/Atom",
       "status": "ok",
       "ticker": "VOW3"
